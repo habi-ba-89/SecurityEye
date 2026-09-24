@@ -1,0 +1,148 @@
+/* ================= ROOT ================= */
+:root{
+  --primary:#0ea5a5;
+  --bg:#f7f9fb;
+  --text:#1a1a2e;
+  --card:#fff;
+}
+
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  padding-top:80px;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  z-index:9999;
+}
+
+header h1{
+  color:var(--primary);
+  font-size:22px;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero2{
+  height:95vh;
+  background:
+  linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1600")
+  center/cover;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
+}
+
+.overlay h1{
+  font-size:60px;
+  margin-bottom:10px;
+  padding:8px 15px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.overlay p{
+  font-size:20px;
+  opacity:.9;
+  padding:8px 15px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+
+.overlay h1:hover,
+.overlay p:hover{
+  background:rgba(14,165,165,.25);
+  box-shadow:0 0 20px rgba(14,165,165,.5);
+  transform:scale(1.05);
+}
+
+/* ================= SERVICES ================= */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:70px 8%;
+}
+
+.card{
+  background:var(--card);
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+  border:1px solid #eee;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:var(--primary);
+  box-shadow:0 12px 30px rgba(14,165,165,.2);
+}
+
+.card h2{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .overlay h1{
+    font-size:36px;
+  }
+
+  .overlay p{
+    font-size:16px;
+  }
+
+  .hero2{
+    height:70vh;
+  }
+}

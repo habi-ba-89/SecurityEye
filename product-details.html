@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Security Eye</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Security Eye</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+<a href="cart.html" id="cartIcon" class="icon cart">
+  🛒
+  <span id="cartCount">0</span>
+</a>
+  </header>
+
+  <main>
+
+    <a href="products.html" class="back">← Back to Products</a>
+
+    <div class="detail">
+
+      <!-- Gallery -->
+      <div class="gallery">
+        <img id="main-img" src="" alt="">
+
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div class="info">
+        <span class="tag" id="category"></span>
+
+        <h1 id="title"></h1>
+
+        <div class="price-row">
+          <b id="price"></b>
+          <s id="old-price"></s>
+          <span class="badge" id="discount"></span>
+        </div>
+
+        <p id="desc"></p>
+
+        <!-- Qty -->
+        <div class="qty">
+          <button onclick="qty(-1)">−</button>
+          <input id="qty" value="1" readonly>
+          <button onclick="qty(1)">+</button>
+        </div>
+
+        <button class="add-btn" onclick="addFromDetail()">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
